@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+:root{
+    --main-small-color:#acacac ;
+    --main-padding:1.5rem;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Lexend', sans-serif;
+    position: relative;
+    height:150vh;
+    
+   /*  height: 300vh; */
+   /*  background: linear-gradient(to bottom,#8d39d226,#ffffff);
+    background-size: cover;
+    background-repeat: no-repeat;
+    */
+    /* border:3px solid black; */
+}
+
+header,footer{
+    padding-inline:1.5rem;
+}
+header{
+    position: sticky;
+    top:0;
+    z-index: 2;
+    background:#fffffffc;
+}
+footer{
+    font-size: 0.7rem;
+    background-color: #fffffffc;
+    padding-top:1rem;
+    position:fixed;
+    top:auto;
+    bottom: 0;
+    left: 0;
+    right:0;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.301);
+
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:black;
+    list-style: none;
+    
+}
+header nav container{
+    text-align: center;
+}
+header nav container p{
+    color:#8d39d2;
+    font-size: 0.7rem;
+}
+header nav container p span{
+    font-size: 0.5rem;
+}
+header nav container div.address-dropdown{
+    color:black;
+    display: flex;
+    font-size: 0.9rem;
+}
+
+footer nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    text-align: center;
+    gap:2rem;
+    color:#000000;
+    
+
+}
+footer :is(.material-symbols-outlined,li):hover,
+footer :is(.material-symbols-outlined,li):active{
+    color:#8d39d2;
+}
+
+/* Top Page Ad Banner */
+main section.ad-banner{    
+    padding:1.5rem 3rem;
+    position: relative;
+
+}
+.ad-obj{
+    margin-inline: auto;
+    width:100%;
+    background: linear-gradient(to right, #8d39d2,#32349b) ;
+    padding:2rem;
+    border-radius: 1rem;
+    display:flex;
+    flex-direction: row;
+    
+}
+div.ad-obj img{
+    display: none; 
+
+ }
+.ad-offer{
+    display: flex;
+    flex-direction: column;
+    width:80%;
+    gap:1rem;
+    color:#fff;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+.ad-offer p{
+    font-size: 0.8rem;
+}
+.ad-offer button{
+    padding: 0.8rem;
+    border:none;
+    border-radius: 2rem;
+    width: 80%;
+    font-size: 0.6rem;
+    font-weight: 700;
+    background: #f6f4f4;
+    color: #171717;
+}
+.ad-offer button:is(:active,:hover){
+    background-color: #380491;
+    color:#fff;
+}
+
+ /* Cuisines */
+main section.cuisines{
+    padding-block:0.5rem;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12); 
+      
+}
+main section.cuisines div.cuisines-flex{
+    display:flex;
+    justify-content: space-evenly;
+    gap:2rem;
+    padding-inline: 1.5rem;
+    overflow-x:scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+main section.cuisines div.cuisines::-webkit-scrollbar{
+    display: none;
+}
+.cuisine-card{
+    text-align: center;
+    white-space: nowrap;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid transparent;
+}
+.cuisine-card:is(:active,:focus-within,:hover){
+    /* transition: all 0.2s ease-in; */
+    border-bottom: 1px solid black;
+}
+.cuisine-card img{
+    position: relative;
+    width:3.5rem;
+    border-radius: 0.2rem;
+}
+
+/* Vendors */
+main section.nearby-vendors{
+    padding-inline: 1.5rem;
+    padding-block:1rem;
+}
+.header-shared{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    align-items: center;
+   
+}
+.header-shared p{
+    font-size: 0.7rem;
+    color: var(--main-small-color);
+    
+    
+}
+
+/* Carousel Card Styling */
+div.nearby-moving-carousel{
+    display: flex;
+    gap:1rem;
+    overflow-x:scroll;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 24px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+div.nearby-moving-carousel::-webkit-scrollbar{
+    display: none;
+}
+
+div.nearby-moving-carousel div.nearby-container{
+    min-width: 16rem;
+    cursor: pointer;
+
+    
+}
+.nearby-carousel-card{
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius:1rem 1rem 0rem 0rem;  
+}
+
+.nearby-carousel-card div.card-header{
+    padding:1rem 1rem 4.5rem 1rem;
+    display:flex;
+    justify-content: space-between;
+}
+span.ratings{
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+}
+span.ratings div.ratings-align-center{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 0.8rem;
+}
+div.ratings-align-center span{
+    color:var(--main-small-color);
+    font-size:0.6rem;
+    margin-inline: 0.3rem 1rem;
+}
+svg{
+   padding: 0.25rem 0;
+   margin-inline:0.5rem 0.2rem;
+}
+
+svg polygon{
+    fill:#ffde0a;
+    stroke:#ffde0a;
+    stroke-width:1.2;
+    stroke-linecap: round;
+    stroke-linejoin: round; 
+    
+}
+button.save-vendor{
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: none;
+}
+button.save-vendor img{
+    width:1rem;
+}
+div.vendor-details{
+    background-color: #ffffff;
+    display:flex;
+    padding-block:1rem;
+    gap:20%;
+    border-radius:0rem 0rem 1rem 1rem;
+    user-select: none;
+    
+}
+div.vendor-details div.vendor-img-and-details{
+    display: flex;
+    gap:0.5rem;
+    padding-left:1rem;
+}
+/* div.vendor-details div.vendor-name-and-cuisine{
+    padding-left:0.4rem;
+} */
+div.vendor-details img{
+    border-radius: 1rem;
+}
+.vendor-details p{
+    padding-top: 0.2rem;
+    font-size: 0.6rem;
+    color:var(--main-small-color);
+    white-space: nowrap;
+}
+
+/* Best Deals */
+main section.best-deals{
+    padding-inline: var(--main-padding);
+}
+.best-deal-vendor-item{
+    width:9rem;
+}
+
+.best-deal-vendors{
+    padding:0.5rem 0rem 0rem 0.5rem; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+    height: 4rem;
+    position: relative;
+}
+.best-deal-vendors .discount-amt{
+    width:45%;
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 0.2rem 0.1rem;
+    margin-bottom: 2rem;
+}
+.best-deal-vendors .discount-amt p{
+    color:#ff1d4a;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-align: center;
+}
+div.best-vendor-card{
+    background-color: #fbfbfd;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: 1.5rem 1rem;
+    text-align: center;
+    border-radius:0rem 0rem 1rem 1rem;
+    
+}
+div.best-vendor-card p{
+    margin-top: 0.1rem;
+    font-size:0.7rem;
+    color:var(--main-small-color)
+}
+div.best-deal-vendors div.best-vendor-pfp{
+    background-size: cover;
+    background-repeat: no-repeat;    
+    position: absolute;
+    width:2.5rem;
+    height: 2.5rem;
+    border-radius:50%;
+    box-shadow: 0.5px 1px 10px 2px rgba(0, 0, 0, 0.548) ;
+    top:2.8rem;
+    bottom:0;
+    left:3.2rem;
+    right:auto;
+}
+
+
+
+/* Media Queries */
+@media screen and (min-width: 560px) {
+    body{
+        width:70%;
+        margin-inline:auto;
+    }
+    main section.cuisines{
+        margin-inline:1rem;
+        justify-content: center;
+        border-radius: 1rem; 
+    }
+    .ad-offer button{
+        font-size:small;
+        width:50%;
+    }
+    div.ad-obj{
+        width:70%;
+    }
+    div.ad-obj img{
+        display:block;
+        width:15rem;
+        position: absolute;
+        right:15%;
+        top:0%;
+        bottom: 0rem;
+    
+     }
+
+    
+}
+
